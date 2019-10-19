@@ -39,7 +39,7 @@ public class BusinessFragment extends Fragment {
     RecyclerView recyclerView;
     StringRequest stringRequest;
     RequestQueue requestQueue;
-    final String url = "https://newsapi.org/v2/top-headlines?sources=the-economist&apiKey=80d7f74f3c2b47ac8d42845578aeab20";
+    final String url = "https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=a01c8188ab3c494fb838be0142e88ec6";
     RecyclerAdapter recyclerAdapter;
 
     @Nullable
@@ -59,6 +59,7 @@ public class BusinessFragment extends Fragment {
     }
 
     public void GetBusinessNews(){
+        Log.d("debug","Fetching business news");
         requestQueue = Volley.newRequestQueue(getActivity());
         stringRequest = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
             @Override

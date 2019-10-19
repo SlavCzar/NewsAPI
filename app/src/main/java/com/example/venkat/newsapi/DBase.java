@@ -40,27 +40,28 @@ public class DBase extends SQLiteOpenHelper {
     public void addFavourite(Favourite favourite){
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
-        values.put(KEY_TITLE,favourite.get);
+        values.put(KEY_TITLE, (String) favourite.getTitle());
     }
+//
+//    public Favourite getFavourite(int id){
+//
+//
+//    }
 
-    public Favourite getFavourite(int id){
+//    public List<Favourite> getAllFavourites(){
+//
+//    }
 
+//    public int getFavouriteCount(){
+//
+//    }
 
-    }
-
-    public List<Favourite> getAllFavourites(){
-
-    }
-
-    public int getFavouriteCount(){
-
-    }
-
-    public int updateFavourite(Favourite favourite){
-
-    }
+//    public int updateFavourite(Favourite favourite){
+//
+//    }
 
     public void deleteFavourite(Favourite favourite){
 
     }
+
 }
