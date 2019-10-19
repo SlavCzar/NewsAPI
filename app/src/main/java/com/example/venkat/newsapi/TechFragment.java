@@ -59,6 +59,7 @@ public class TechFragment extends Fragment {
     }
 
     public void GetTechNews(){
+        tech.clear();
         Log.d("debug","Fetching business news");
         requestQueue = Volley.newRequestQueue(getActivity());
         stringRequest = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
